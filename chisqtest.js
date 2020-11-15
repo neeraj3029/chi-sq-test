@@ -3,6 +3,9 @@ function lengthCheck(expected, observed) {
 }
 
 function chisqtest(expected, observed, params) {
+
+    
+
     var sum = 0;
     for(var i=0;i<expected.length;++i) {
         sum += (Math.pow(observed[i] - expected[i], 2))/expected[i];
