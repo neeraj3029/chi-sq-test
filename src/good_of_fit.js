@@ -19,7 +19,7 @@ const goodnessOfFit = (f_obs, f_exp, ddof) => {
     if(!Array.isArray(f_exp)) {
         ddof = f_exp;
         f_exp = [];
-        exp = f_obs.reduce(reducer)/f_obs.length;
+        const exp = f_obs.reduce(reducer)/f_obs.length;
         for(let i=0;i<f_obs.length;i++) {
             f_exp.push(exp);
         }
@@ -37,7 +37,7 @@ const goodnessOfFit = (f_obs, f_exp, ddof) => {
     
     return {
         'value': sum,
-        'p-value': chi.cdf(sum, ddof)
+        'pValue': chi.cdf(sum, ddof)
     };
 }
 
