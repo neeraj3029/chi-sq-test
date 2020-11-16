@@ -9,6 +9,7 @@
   "author": "neerajr",
   "license": "MIT",
   "dependencies": {
+    "chi-squared": "^1.1.0",
     "distributions": "^2.1.0"
   }
 }

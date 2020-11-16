@@ -1,10 +1,13 @@
 var test = require('./chisqtest.js')
-const Distribution = require('distributions').Studentt;
-console.log(Distribution)
-// params = {
-//     'df': ,
-//     'bins': 
-// }
 
-// var res = test([1,2], [2,4]);
-// console.log(res);
+params = {
+    'ddof': 0,
+    'bins': 4 
+}
+observed = [1,2,4,5];
+expected = [
+    2,2,2,2
+];
+
+var res = test(observed);
+console.log(res);
