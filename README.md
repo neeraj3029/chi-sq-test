@@ -69,15 +69,61 @@ console.log(testres2);
 Function ```gof``` returns a JSON object, which contains Chi-Square `value` and the `pValue` for the given dataset.
 
 
-## To test indpendence between two datasets.
+## Chi-square statistics for independence
 
 ```console
 ChiSqTest.independence(fObs, ddof)
 ```
+
+
 <details>
     <summary><b>Documentation</b></summary>
     <ul>
-        <li><code>fObs</code>: [2D Array] 2D list of observed frequencies</li>
-        <li><code>ddof</code>: [number] delta degree of freedom. Default: 0, n: number of bins</li>
+        <li><code>fObs</code>: [2D Array] 2D-Array of observed frequencies of interestcting categories T<sub>ij</sub> = (A<sub>i</sub> ∩ B<sub>j</sub>)
+        <br /> 
+            &nbsp; &nbsp; &nbsp; <i><b>Default:</b> No default value, essential arg</i>
+        </li>
+        <li><code>ddof</code>: [number] delta degrees of freedom. <br />
+        &nbsp; &nbsp; &nbsp; Effective degrees of freedom = <code>(k - 1).(m - 1) - ddof</code>, where k and m are number of categories in sets A and B respectively.
+            <br /> 
+            &nbsp; &nbsp; &nbsp; <i><b>Default</b> ddof: 0</i>
+        </li>
     </ul>
 </details>
+
+### Example
+
+<details>
+<summary>Statement</summary>
+We have an email-dataset which is divided in two ways. \
+A = {with image, without images} \
+B = {Spam, No Spam}
+
+| fObs(i,j)  | With Images  | Without Images  |  
+|---|---|---|---|---|
+| Spam  | 160  | 240  |   |   |
+| No Spam  | 140  | 460  |   |   |
+|   |   |   |   |   |
+
+For the null hypothesis: \
+ H<sub>0</sub>: Email spam and image attachment are independent. \
+ H<sub>A</sub>: being spam and image attachment are dependent
+</details>
+
+```js
+const obs = [
+    [160, 240],
+    [140, 460]
+];
+
+console.log(
+    ChiSqTest.independence(obs, 0)
+);
+
+/*
+=> { value: 31.746031746031747, pValue: 1.7570790822318827e-8 }
+*/
+```
+
+Output: \
+Function ```independence``` returns a JSON object, which contains Chi-Square `value` and the `pValue` for the hypothesis for indpendence.
