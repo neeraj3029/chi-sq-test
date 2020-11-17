@@ -61,10 +61,7 @@ Output:
 Function ```gof``` returns a JSON object, which contains Chi-Square value and the pValue for the given dataset.
 
 ```json
-{ 
-    value: 1.0833333, // Chi-Square value
-    pValue: 0.781098958, // p-value 
-}
+{ value: 1.0833333333333333, pValue: 07810989584380449 }
 ```
 
 ## To test indpendence between two datasets.
