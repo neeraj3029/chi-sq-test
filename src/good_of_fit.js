@@ -37,7 +37,7 @@ const goodnessOfFit = (f_obs, f_exp, ddof) => {
     
     return {
         'value': sum,
-        'pValue': chi.cdf(sum, ddof)
+        'pValue': 1-chi.cdf(sum, ddof)
     };
 }
 

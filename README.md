@@ -39,7 +39,8 @@ const testres = ChiSqTest.gof(f_exp, f_obs, ddof);
 const testres = ChiSqTest.gof(f_obs);
 
 /*
-    When just f_obs is given, it is assumed that the expected frequencies are uniform and given by the mean of the observed frequencies (Like SciPy).
+    When just f_obs is given, it is assumed that the expected frequencies 
+    are uniform and given by the mean of the observed frequencies (Like SciPy).
 */
 ```
 
@@ -49,7 +50,7 @@ Function ```gof``` returns a JSON object, which contains Chi-Square value and th
 ```
 { 
     value: 1.0833333, // Chi-Square value
-    pValue: 0.21890104, // p-value 
+    pValue: 0.781098958, // p-value 
 }
 ```
 

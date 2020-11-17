@@ -34,7 +34,7 @@ const chisqindependence = (f_obs, ddof) => {
     
     return {
         'value': chi_sq,
-        'pValue': chi.cdf(chi_sq, ddof)
+        'pValue': 1-chi.cdf(chi_sq, ddof)
     };
 
 }
