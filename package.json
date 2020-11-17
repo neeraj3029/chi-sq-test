@@ -8,6 +8,14 @@
     "compile": "babel --source-maps -d lib/ src/",
     "prepublish": "npm run compile"
   },
+  "keywords": [
+    "chi-squared",
+    "statistics",
+    "hypothesis",
+    "chi-squared-tests",
+    "distribution",
+    "independence"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/neeraj3029/Chi-Squared-test.git"
