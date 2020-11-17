@@ -13,7 +13,15 @@ npm install chi-sq-test
 To run chi-squared test for a given dataset
 
 
-```ChiSqTest(f_exp, f_obs, params)```
+```ChiSqTest(f_obs, f_exp, ddof)```
+<details>
+    <summary>Documentation</summary>
+    <ul>
+        <li><code>f_obs</code>: [Array]list of observed frequencies</li>
+        <li><code>f_exp</code>: [Array]list of expected frequencies</li>
+        <li><code>ddof</code>: [number] degree of freedom. Default: n-1, n: number of bins</li>
+    </ul>
+</details>
 
 Example:
 ```
@@ -37,13 +45,7 @@ Function ```gof``` returns a JSON object, which contains Chi-Square value and th
 
 ```
 { 
-    value: 0.21890104, // Chi-Square value
-    pValue: 1.0833333, // p-value 
+    value: 1.0833333, // Chi-Square value
+    pValue: 0.21890104, // p-value 
 }
 ```
-
-
-**Testing independence of two datasets:**
-
-// Todo
-

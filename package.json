@@ -1,6 +1,6 @@
 {
-  "name": "chi-sq-test",
-  "version": "1.0.5",
+  "name": "@neeraj3029/chi-sq-test",
+  "version": "1.0.6",
   "description": "Chi-Squared hypothesis tests to test distribution fitness for dataset and independence among datasets",
   "main": "lib/index.js",
   "scripts": {
