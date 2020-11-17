@@ -150,10 +150,6 @@ console.log(
 */
 ```
 
-Output: \
+**Output**: \
+
 Function ```independence``` returns a JSON object, which contains Chi-Square `value` and the `pValue` for the hypothesis for indpendence.
-
-### Developer
-
-Neeraj Rajpurohit
-
