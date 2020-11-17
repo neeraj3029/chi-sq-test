@@ -8,24 +8,26 @@ const independenceTest = (observed, ddof) => {
 
     const K = observed.length;
     const M = observed[0].length;
-    const N = K * M;
     const df = (typeof ddof === 'number') ? (ddof) : (0);
     const rowSums = Array(K).fill(0);
     const colSums = Array(M).fill(0);
-    for (let i = 0; i < K; i += 1) {
-        for (let j = 0; j < M; j += 1) {
+    let n = 0;
+
+    rowSums.forEach((rowEle, i) => {
+        colSums.forEach((colEle, j) => {
             rowSums[i] += observed[i][j];
             colSums[j] += observed[i][j];
-        }
-    }
+            n += observed[i][j];
+        });
+    });
 
     let chiSq = 0;
-    for (let i = 0; i < K; i += 1) {
-        for (let j = 0; j < M; j += 1) {
-            const exp = (rowSums[i] * colSums[j]) / N;
-            chiSq += ((observed[i][j] - exp) ** 2) / observed[i][j];
-        }
-    }
+    rowSums.forEach((rowEle, i) => {
+        colSums.forEach((colEle, j) => {
+            const exp = (rowEle * colEle) / n;
+            chiSq += ((observed[i][j] - exp) ** 2) / exp;
+        });
+    });
 
     return {
         value: chiSq,

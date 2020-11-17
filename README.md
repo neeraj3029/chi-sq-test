@@ -20,7 +20,7 @@ To run chi-squared test for a given dataset
 ChiSqTest.gof(fObs, fExp, ddof)
 ```
 <details>
-    <summary>Documentation</summary>
+    <summary><b>Documentation</b></summary>
     <ul>
         <li><code>fObs</code>: [Array] Array of observed frequencies for each category
         <br /> 
@@ -39,7 +39,7 @@ ChiSqTest.gof(fObs, fExp, ddof)
     This is somewhat similar to SciPy.
 </details>
 
-## Example:
+#### Example:
 
 ```js
 
@@ -75,7 +75,7 @@ Function ```gof``` returns a JSON object, which contains Chi-Square `value` and 
 ChiSqTest.independence(fObs, ddof)
 ```
 <details>
-    <summary>Documentation</summary>
+    <summary><b>Documentation</b></summary>
     <ul>
         <li><code>fObs</code>: [2D Array] 2D list of observed frequencies</li>
         <li><code>ddof</code>: [number] delta degree of freedom. Default: 0, n: number of bins</li>
