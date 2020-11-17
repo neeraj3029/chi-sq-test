@@ -1,9 +1,22 @@
 
-# Chi-Sqaured tests
+<h1 align="center">
+Chi-Sqaured tests
+</h1>
 
-This package helps run Chi-Squared hypothesis tests for testing a distribution for a dataset.
+<p align="center">
 
-## How to install
+<img src="https://img.shields.io/npm/dm/chi-sq-test?style=flat-square" align="center">
+
+<img src="https://img.shields.io/npm/v/chi-sq-test.svg?style=for-the-badge" align="center">
+
+<img src="https://img.shields.io/github/license/neeraj3029/chi-sq-test?logoColor=yellow&style=flat-square" align="center">
+
+</p>
+
+
+This package helps run Chi-Squared hypothesis tests for testing distributions on dataset. Details follow.
+
+### How to install
 
 This library can easily be integrated in to your project manually. Alternatively, the library can be included using npm/GitHub packages.
 
@@ -11,9 +24,9 @@ This library can easily be integrated in to your project manually. Alternatively
 npm install chi-sq-test
 ```
 
-## How to use
+### How to use
 
-To run chi-squared test for a given dataset
+**To run chi-squared test for a given dataset**
 
 
 ```console
@@ -116,9 +129,9 @@ B = {Spam, No Spam}
     <td>460</td>
   </tr>
 </table>
-For the null hypothesis: <br />
- H<sub>0</sub>: Email spam and image attachment are independent. <br />
- H<sub>A</sub>: Being spam and image attachment are dependent
+For the null hypothesis: \
+ H<sub>0</sub>: Email spam and image attachment are independent. \
+ H<sub>A</sub>: being spam and image attachment are dependent
 </details>
 
 ```js
@@ -139,3 +152,8 @@ console.log(
 
 Output: \
 Function ```independence``` returns a JSON object, which contains Chi-Square `value` and the `pValue` for the hypothesis for indpendence.
+
+### Developer
+
+Neeraj Rajpurohit
+
