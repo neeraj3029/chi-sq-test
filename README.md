@@ -43,7 +43,7 @@ ChiSqTest.gof(fObs, fExp, ddof)
 
 ```js
 
-const ChiSqTest = require('chi-sq-test')
+const ChiSqTest = require('chi-sq-test');
 
 const obs = [2, 3, 4]; // observed frequencies 
 const exp = [3, 4, 5]; // expected frequencies    
@@ -116,12 +116,13 @@ B = {Spam, No Spam}
     <td>460</td>
   </tr>
 </table>
-For the null hypothesis: \
- H<sub>0</sub>: Email spam and image attachment are independent. \
- H<sub>A</sub>: being spam and image attachment are dependent
+For the null hypothesis: <br />
+ H<sub>0</sub>: Email spam and image attachment are independent. <br />
+ H<sub>A</sub>: Being spam and image attachment are dependent
 </details>
 
 ```js
+const ChiSqTest = require('chi-sq-test');
 const obs = [
     [160, 240],
     [140, 460]
