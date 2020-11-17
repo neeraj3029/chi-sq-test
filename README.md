@@ -45,17 +45,17 @@ ChiSqTest.gof(fObs, fExp, ddof)
 
 const ChiSqTest = require('chi-sq-test')
 
-const fObs = [2, 3, 4]; // observed frequencies 
-const fExp = [3, 4, 5]; // expected frequencies    
+const obs = [2, 3, 4]; // observed frequencies 
+const exp = [3, 4, 5]; // expected frequencies    
 const ddof = 0;       // delta degree of freedom (Degree Of Freedom  = 3-1 = 2)
 
-const testres1 = ChiSqTest.gof(fExp, fObs, ddof);
+const testres1 = ChiSqTest.gof(obs, exp, ddof);
 console.log(testres1);
 /*
-=> { value: 1.0833333333333333, pValue: 0.5817779279403947 }
+=> { value: 0.7833333333333332, pValue: 0.6759293959125221 }
 */
 
-const testres2 = ChiSqTest.gof(fObs); // mean fObs is used as fExp by default
+const testres2 = ChiSqTest.gof(obs); // mean fObs is used as fExp by default
 
 console.log(testres2);
 
