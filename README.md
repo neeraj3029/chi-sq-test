@@ -9,8 +9,7 @@ Chi-Sqaured tests
 
 <img src="https://img.shields.io/npm/v/chi-sq-test.svg?style=for-the-badge" align="center">
 
-<img src="https://img.shields.io/github/license/neeraj3029/chi-sq-test?logoColor=yellow&style=flat-square" align="center">
-
+<img src="https://img.shields.io/npm/l/chi-sq-test?style=flat-square" align="center">
 </p>
 
 
@@ -150,6 +149,6 @@ console.log(
 */
 ```
 
-**Output**: \
+**Output**: 
 
 Function ```independence``` returns a JSON object, which contains Chi-Square `value` and the `pValue` for the hypothesis for indpendence.
