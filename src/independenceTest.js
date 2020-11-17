@@ -6,10 +6,10 @@ const independenceTest = (observed, df) => {
         throwError('expected frequency must be an array of size > 0');
     }
 
-    const dof = (typeof ddof !== 'number') ? (df) : (observed.length - 1);
     const K = observed.length;
     const M = observed[0].length;
     const N = K * M;
+    const ddof = (typeof df === 'number') ? (df) : (0);
     const rowSums = Array(K).fill(0);
     const colSums = Array(M).fill(0);
     for (let i = 0; i < K; i += 1) {
@@ -29,7 +29,7 @@ const independenceTest = (observed, df) => {
 
     return {
         value: chiSq,
-        pValue: 1 - cdf(chiSq, dof),
+        pValue: 1 - cdf(chiSq, (K - 1) * (M - 1) - ddof),
     };
 };
 

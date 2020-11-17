@@ -22,19 +22,21 @@ ChiSqTest.gof(fObs, fExp, ddof)
 <details>
     <summary>Documentation</summary>
     <ul>
-        <li><code>fObs</code>: [Array] list of observed frequencies
+        <li><code>fObs</code>: [Array] Array of observed frequencies for each category
         <br /> 
             &nbsp; &nbsp; &nbsp; <i>Default: No default value, essential arg</i>
         </li>
-        <li><code>fExp</code>: [Array] list of expected frequencies
+        <li><code>fExp</code>: [Array] Array of expected frequencies in each category
         <br /> 
-            &nbsp; &nbsp; &nbsp; <i>Default: array containing mean of the observed frequencies repeated n times</i>
+            &nbsp; &nbsp; &nbsp; <i>Default: By default all categories are assumed to be equally likely. Expected frequency of each &nbsp;category would be the mean of observed frequencies.</i>
         </li>
-        <li><code>ddof</code>: [number] degree of freedom. 
+        <li><code>ddof</code>: [number] delta degrees of freedom. <br />
+        &nbsp; &nbsp; &nbsp; Effective degrees of freedom = <code>k - 1 - ddof</code>, where k is the number of observed frequencies.
             <br /> 
-            &nbsp; &nbsp; &nbsp; <i>Default: n-1, n: number of bins</i>
+            &nbsp; &nbsp; &nbsp; <i>Default ddof: 0</i>
         </li>
     </ul>
+    This is somewhat similar to SciPy.
 </details>
 
 ## Example:
@@ -43,20 +45,20 @@ ChiSqTest.gof(fObs, fExp, ddof)
 
 const ChiSqTest = require('chi-sq-test')
 
-fObs = [2,3,4]; // observed frequencies 
-fExp = [3,4,5]; // expected frequencies    
-ddof = 3         // degree of freedom 
-
+const fObs = [2, 3, 4]; // observed frequencies 
+const fExp = [3, 4, 5]; // expected frequencies    
+const ddof = 0;       // delta degree of freedom (Degree Of Freedom  = 3-1 = 2)
 
 const testres1 = ChiSqTest.gof(fExp, fObs, ddof);
 console.log(testres1);
 /*
-=> { value: 1.0833333333333333, pValue: 0.7810989584380449 }
+=> { value: 1.0833333333333333, pValue: 0.5817779279403947 }
 */
 
 const testres2 = ChiSqTest.gof(fObs); // mean fObs is used as fExp by default
 
 console.log(testres2);
+
 /*
 => { value: 0.6666666666666666, pValue: 0.7165313783925148 }
 */
@@ -64,11 +66,8 @@ console.log(testres2);
 ```
 
 #### Output:
-Function ```gof``` returns a JSON object, which contains Chi-Square value and the pValue for the given dataset.
+Function ```gof``` returns a JSON object, which contains Chi-Square `value` and the `pValue` for the given dataset.
 
-```
-
-```
 
 ## To test indpendence between two datasets.
 
@@ -79,6 +78,6 @@ ChiSqTest.independence(fObs, ddof)
     <summary>Documentation</summary>
     <ul>
         <li><code>fObs</code>: [2D Array] 2D list of observed frequencies</li>
-        <li><code>ddof</code>: [number] degree of freedom. Default: n-1, n: number of bins</li>
+        <li><code>ddof</code>: [number] delta degree of freedom. Default: 0, n: number of bins</li>
     </ul>
 </details>

@@ -6,7 +6,6 @@ const goodnessOfFit = (observed, expected, df) => {
     if (!Array.isArray(observed) || observed.length === 0) {
         throwError('expected frequency must be an array of size > 0');
     }
-
     let ddof = df;
     if (!Array.isArray(expected)) {
         ddof = expected;
@@ -18,14 +17,13 @@ const goodnessOfFit = (observed, expected, df) => {
     }
 
     if (typeof ddof !== 'number') {
-        ddof = observed.length - 1; // default value of ddof is (length - 1)
+        ddof = 0; // default value of ddof is (length - 1)
     }
 
     const chisq = observed.reduce((a, c, i) => a + (((c - expected[i]) ** 2) / expected[i]), 0);
-
     return {
         value: chisq,
-        pValue: 1 - cdf(chisq, ddof),
+        pValue: 1 - cdf(chisq, observed.length - 1 - ddof),
     };
 };
 
