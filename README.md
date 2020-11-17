@@ -91,7 +91,7 @@ ChiSqTest.independence(fObs, ddof)
     </ul>
 </details>
 
-### Example
+#### Example
 
 <details>
 <summary>Statement</summary>
@@ -99,12 +99,23 @@ We have an email-dataset which is divided in two ways. \
 A = {with image, without images} \
 B = {Spam, No Spam}
 
-| fObs(i,j)  | With Images  | Without Images  |  
-|---|---|---|---|---|
-| Spam  | 160  | 240  |   |   |
-| No Spam  | 140  | 460  |   |   |
-|   |   |   |   |   |
-
+<table style="width:100%">
+  <tr>
+    <th>fObs(i,j)</th>
+    <th>With Images</th>
+    <th>Without Images</th>
+  </tr>
+  <tr>
+    <td>Spam</td>
+    <td>160</td>
+    <td>240</td>
+  </tr>
+  <tr>
+    <td>No Spam</td>
+    <td>140</td>
+    <td>460</td>
+  </tr>
+</table>
 For the null hypothesis: \
  H<sub>0</sub>: Email spam and image attachment are independent. \
  H<sub>A</sub>: being spam and image attachment are dependent
