@@ -3,7 +3,7 @@
 
 This package helps run Chi-Squared hypothesis tests for testing a distribution for a dataset.
 
-**How to install**
+## How to install
 
 This library can easily be integrated in to your project manually. Alternatively, the library can be included using npm/GitHub packages.
 
@@ -11,7 +11,7 @@ This library can easily be integrated in to your project manually. Alternatively
 npm install chi-sq-test
 ```
 
-**How to use**
+## How to use
 
 To run chi-squared test for a given dataset
 
@@ -26,7 +26,7 @@ To run chi-squared test for a given dataset
     </ul>
 </details>
 
-Example:
+## Example:
 ```
 const ChiSqTest = require('chi-sq-test')
 
@@ -53,7 +53,7 @@ Function ```gof``` returns a JSON object, which contains Chi-Square value and th
 }
 ```
 
-To test indpendence between two datasets.
+## To test indpendence between two datasets.
 
 ```ChiSqTest.independence(f_obs, ddof)```
 <details>
