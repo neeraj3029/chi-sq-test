@@ -24,16 +24,16 @@ ChiSqTest.gof(fObs, fExp, ddof)
     <ul>
         <li><code>fObs</code>: [Array] Array of observed frequencies for each category
         <br /> 
-            &nbsp; &nbsp; &nbsp; <i>Default: No default value, essential arg</i>
+            &nbsp; &nbsp; &nbsp; <i><b>Default:</b> No default value, essential arg</i>
         </li>
         <li><code>fExp</code>: [Array] Array of expected frequencies in each category
         <br /> 
-            &nbsp; &nbsp; &nbsp; <i>Default: By default all categories are assumed to be equally likely. Expected frequency of each &nbsp;category would be the mean of observed frequencies.</i>
+            &nbsp; &nbsp; &nbsp; <i><b>Default:</b> By default all categories are assumed to be equally likely. Expected frequency of each &nbsp;category would be the mean of observed frequencies.</i>
         </li>
         <li><code>ddof</code>: [number] delta degrees of freedom. <br />
         &nbsp; &nbsp; &nbsp; Effective degrees of freedom = <code>k - 1 - ddof</code>, where k is the number of observed frequencies.
             <br /> 
-            &nbsp; &nbsp; &nbsp; <i>Default ddof: 0</i>
+            &nbsp; &nbsp; &nbsp; <i><b>Default</b> ddof: 0</i>
         </li>
     </ul>
     This is somewhat similar to SciPy.
@@ -51,12 +51,12 @@ const ddof = 0;       // delta degree of freedom (Degree Of Freedom  = 3-1 = 2)
 
 const testres1 = ChiSqTest.gof(obs, exp, ddof);
 console.log(testres1);
+
 /*
 => { value: 0.7833333333333332, pValue: 0.6759293959125221 }
 */
 
 const testres2 = ChiSqTest.gof(obs); // mean fObs is used as fExp by default
-
 console.log(testres2);
 
 /*
