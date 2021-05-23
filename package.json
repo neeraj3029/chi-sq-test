@@ -4,7 +4,7 @@
   "description": "Chi-Squared hypothesis tests to test distribution fitness for dataset and independence among datasets",
   "main": "lib/index.js",
   "scripts": {
-    "test": "node src/test.js",
+    "test": "qunit",
     "compile": "babel --source-maps -d lib/ src/",
     "prepublish": "npm run compile"
   },
@@ -30,6 +30,7 @@
     "babel-preset-es2015": "^6.24.1",
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.22.1",
+    "qunit": "^2.15.0"
   }
 }
