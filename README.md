@@ -15,7 +15,7 @@ Chi-Sqaured tests
 </p>
 
 
-This package helps run Chi-Squared hypothesis tests for testing distributions on dataset. Details follow.
+This package helps run Chi-Squared hypothesis tests for testing distributions on numerical data. Details follow.
 
 ### How to install
 
