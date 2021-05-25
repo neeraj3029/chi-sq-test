@@ -10,6 +10,8 @@ Chi-Sqaured tests
 <img src="https://img.shields.io/npm/v/chi-sq-test.svg?style=for-the-badge" align="center">
 
 <img src="https://img.shields.io/npm/l/chi-sq-test?style=flat-square" align="center">
+
+<img src="https://travis-ci.org/neeraj3029/chi-sq-test.svg?branch=main" align="center">
 </p>
 
 
