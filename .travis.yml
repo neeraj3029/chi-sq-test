@@ -1,0 +1,11 @@
+sudo: false
+language: node_js
+node_js: 
+  - "10.22.0"
+install:
+  npm ci
+cache:
+  directories:
+  - "$HOME/.npm"
+notifications:
+  email: false
