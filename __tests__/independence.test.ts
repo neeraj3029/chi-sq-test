@@ -1,4 +1,4 @@
-const independence = require("../src/independenceTest.js");
+import { independenceTest } from '../src/independence-test';
 
 QUnit.module("Independence", () => {
   QUnit.test("Value test-1, All data", (assert) => {
@@ -8,9 +8,10 @@ QUnit.module("Independence", () => {
     ];
 
     assert.deepEqual(
-      independence(obs), { 
+      independenceTest(obs), { 
         value: 31.746031746031747, 
-        pValue: 1.7570790822318827e-8 },
+        pValue: 1.7570790822318827e-8 
+      },
       "Independence Test-1"
     );
   });

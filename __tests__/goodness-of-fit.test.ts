@@ -1,6 +1,5 @@
-// Qunit = require(QUnit);
-const QUnit = require('qunit');
-const gof = require('../src/goodnessOfFitTest.js');
+import { QUnit }  from 'qunit';
+import { gof } from '../src';
 
 const { test } = QUnit;
 
@@ -18,7 +17,7 @@ test('Value test-1, All data', (assert) => {
 });
 
 test('Value test-1, Without exp & ddof', (assert) => {
-  fObs = [2,3,4]; // observed frequencies
+  const fObs = [2,3,4]; // observed frequencies
   assert.deepEqual(
     gof(fObs), {
       value: 0.6666666666666666,

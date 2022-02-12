@@ -3,10 +3,13 @@
   "version": "1.0.8",
   "description": "Chi-Squared hypothesis tests to test distribution fitness for dataset and independence among datasets",
   "main": "lib/index.js",
+  "typings": "./lib/index.d.ts",
   "scripts": {
+    "files": "lib/**",
     "test": "qunit",
     "compile": "babel --source-maps -d lib/ src/",
-    "prepublish": "npm run compile"
+    "prepublish": "npm run compile",
+    "build": "tsc"
   },
   "keywords": [
     "chi-squared",
@@ -31,6 +34,7 @@
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "qunit": "^2.15.0"
+    "qunit": "^2.17.2",
+    "typescript": "^4.5.5"
   }
 }
