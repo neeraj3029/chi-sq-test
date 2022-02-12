@@ -1,14 +1,13 @@
 {
   "name": "chi-sq-test",
-  "version": "1.0.8",
+  "version": "1.0.9-beta",
   "description": "Chi-Squared hypothesis tests to test distribution fitness for dataset and independence among datasets",
   "main": "lib/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
     "files": "lib/**",
     "test": "qunit",
-    "compile": "babel --source-maps -d lib/ src/",
-    "prepublish": "npm run compile",
+    "prepublish": "npm run build",
     "build": "tsc"
   },
   "keywords": [
