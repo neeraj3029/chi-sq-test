@@ -1,16 +1,16 @@
-const { cdf } = require('chi-squared');
-const { throwError } = require('./utils');
+import { cdf } from 'chi-squared';
+import { throwError } from './utils';
+import { IPValue } from '../models'
 
-const independenceTest = (observed, ddof) => {
+const independenceTest = (observed: number[][], ddof = 0): IPValue => {
     if (!Array.isArray(observed) || observed.length === 0) {
         throwError('expected frequency must be an array of size > 0');
     }
 
-    const K = observed.length;
-    const M = observed[0].length;
-    const df = (typeof ddof === 'number') ? (ddof) : (0);
-    const rowSums = Array(K).fill(0);
-    const colSums = Array(M).fill(0);
+    const K = observed?.length;
+    const M = observed[0]?.length;
+    const rowSums = Array.apply(null, Array(K)).map(Number.prototype.valueOf, 0);
+    const colSums = Array.apply(null, Array(M)).map(Number.prototype.valueOf, 0);
     let n = 0;
 
     rowSums.forEach((rowEle, i) => {
@@ -31,8 +31,8 @@ const independenceTest = (observed, ddof) => {
 
     return {
         value: chiSq,
-        pValue: 1 - cdf(chiSq, (K - 1) * (M - 1) - df),
+        pValue: 1 - cdf(chiSq, (K - 1) * (M - 1) - ddof),
     };
 };
 
-module.exports = independenceTest;
+export { independenceTest };
